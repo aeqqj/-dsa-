@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Indie Flower", monospace;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
 }
 
 body {
@@ -10,10 +16,52 @@ body {
     background-color: #ecf0f1;
 }
 
+header {
+    width: 100%;
+    padding: 0 64px;
+}
+
 button {
     all: unset;
     display: inline-block;
     cursor: pointer;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3.75rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.125rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+li {
+    font-size: 2rem;
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5rem;
 }
 
 .hero-section {
@@ -25,6 +73,20 @@ button {
     flex-direction: column;
 }
 
+.body-section {
+    padding: 0px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.problem-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 64px;
+}
+
 .day-container {
     height: 100px;
     width: 100vw;
@@ -32,6 +94,12 @@ button {
     gap: 50px;
     justify-content: center;
     align-items: center;
+}
+
+.category-container {
+    height: 100px;
+    display: flex;
+    gap: 50px;
 }
 
 .day-button {
@@ -56,4 +124,37 @@ button {
 
 .day-button:hover .second {
     opacity: 1;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.examples-container {
+    display: inline-block;
+    width: 1000px;
+    border: 1px solid black;
+    padding: 32px;
+}
+
+.specification {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+}
+
+.title-description {
+    margin-bottom: 64px;
 }
