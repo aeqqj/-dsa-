@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ecf0f1;
+}
+
+button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hero-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.day-container {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-button {
+    position: relative;
+    display: inline-block;
+}
+
+.day-button img {
+    display: block;
+}
+
+.day-button .second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.day-button:hover .first {
+    opacity: 0;
+}
+
+.day-button:hover .second {
+    opacity: 1;
+}
