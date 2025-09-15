@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+}
+
+#hero-section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 64px;
+}
+
+#heading-container a {
+    display: inline-block;
+}
+
+#link:hover {
+    text-decoration: underline;
+}
+
+#detail-container {
+    width: 100%;
+    display: flex;
+    gap: 96px;
+}
+
+#instruction-container {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+}
+
+#code-container {
+    width: 1000px;
+    border: 1px solid black;
+    padding: 32px;
+}
