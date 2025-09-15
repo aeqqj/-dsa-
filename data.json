@@ -1,6 +1,6 @@
 [
     {
-        "number": "I",
+        "number": "I.",
         "title": "Valid Parentheses",
         "link": "https://leetcode.com/problems/valid-parentheses/description/",
         "site": "leetcode.com",
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "number": "II",
+        "number": "II.",
         "title": "Redundant Braces",
         "link": "https://www.interviewbit.com/problems/redundant-braces/",
         "site": "InterviewBit.com",
@@ -107,7 +107,7 @@
         ]
     },
     {
-        "number": "III",
+        "number": "III.",
         "title": "Minimum Remove to Make Valid Parentheses",
         "link": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
         "site": "leetcode.com",
