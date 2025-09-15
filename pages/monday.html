@@ -4,122 +4,77 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>&lt;dsa&gt;</title>
-        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/monday.css" />
         <link rel="icon" href="../assets/favicon.ico" />
     </head>
     <body>
-        <header class="center">
+        <header>
             <a href="../index.html">
-                <img src="../assets/mon-prob.jpg" alt="title" width="400px" />
+                <img
+                    src="../assets/monday/mon-prob.jpg"
+                    alt="title"
+                    width="400px"
+                />
             </a>
-
-            <div class="category-container">
+            <div id="problem-container">
                 <button>
                     <img
-                        src="../assets/valid-parenthesis.jpg"
+                        src="../assets/monday/valid-parentheses.jpg"
+                        alt="valid-parenthesis"
+                        width="300px"
+                    />
+                    <img
+                        src="../assets/monday/valid-parentheses.gif"
+                        alt="valid-parentheses"
+                        width="300px"
+                    />
+                </button>
+                <button>
+                    <img
+                        src="../assets/monday/redundant-braces.jpg"
+                        alt="valid-parenthesis"
+                        width="300px"
+                    />
+                    <img
+                        src="../assets/monday/redundant-braces.gif"
                         alt="valid-parenthesis"
                         width="300px"
                     />
                 </button>
                 <button>
                     <img
-                        src="../assets/redundant-braces.jpg"
+                        src="../assets/monday/minimum-remove.jpg"
                         alt="valid-parenthesis"
                         width="300px"
                     />
-                </button>
-                <button>
                     <img
-                        src="../assets/minimum-remove.jpg"
+                        src="../assets/monday/minimum-remove.gif"
                         alt="valid-parenthesis"
                         width="300px"
                     />
                 </button>
             </div>
         </header>
-        <section class="body-section">
-            <section class="problem-section">
-                <div class="title-description">
-                    <a
-                        href="https://leetcode.com/problems/valid-parentheses/description/"
-                        target="_blank"
-                    >
-                        <h2>
-                            I. <span class="link">Valid Parentheses</span
-                            ><span style="font-size: 16px; margin-left: 16px"
-                                >leetcode.com</span
-                            >
-                        </h2>
-                    </a>
-                    <p>
-                        Given a string
-                        <code style="text-decoration: underline">s</code>
-                        containing just the characters '(', ')', '{', '}', '['
-                        and ']', determine if the input string is valid.
-                    </p>
-                </div>
-                <div class="flex-container">
-                    <div class="specification">
-                        <div>
-                            <h3>An input string is valid if</h3>
-                            <ul>
-                                <li>
-                                    Open brackets must be closed by the same
-                                    type of brackets.
-                                </li>
-                                <li>
-                                    Open brackets must be closed in the correct
-                                    order.
-                                </li>
-                                <li>
-                                    Every closing bracket has a corresponding
-                                    opening bracket of the same type.
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Constraints</h3>
-                            <ul>
-                                <li>1 &lt;= s.length &lt;= 10⁴</li>
-                                <li>
-                                    <code>s</code> consists only of the
-                                    characters '()[]{}'.
-                                </li>
-                            </ul>
-                        </div>
+        <section id="hero-section">
+            <div id="heading-container"></div>
+            <div id="detail-container">
+                <div id="instruction-container">
+                    <div id="valid-container">
+                        <h3>An input string is valid if</h3>
+                        <ul></ul>
                     </div>
-                    <div>
-                        <h3>Examples</h3>
-                        <div class="examples-container">
-                            <pre><code>Input: s = "()"
-Output: true</code></pre>
-                            <br />
-
-                            <pre><code>Input: s = "()[]{}"
-Output: true</code></pre>
-                            <br />
-                            <pre><code>Input: s = "(]"
-Output: false</code></pre>
-                            <br />
-
-                            <pre><code>Input: s = "([])"
-Output: true</code></pre>
-                            <br />
-                            <pre><code>Input: s = "([)]"
-Output: false</code></pre>
-                            <br />
-                            <pre><code>Input: s = "{([)]}"
-Output: false</code></pre>
-                            <br />
-                            <pre><code>Input: s = "("
-Output: false</code></pre>
-                            <br />
-                            <pre><code>Input: s = "{[]}"
-Output: true</code></pre>
-                        </div>
+                    <div id="constraint-container">
+                        <h3>Constraints</h3>
+                        <ul></ul>
                     </div>
                 </div>
-            </section>
+                <div id="example-container">
+                    <h3>Examples</h3>
+                    <div id="code-container"></div>
+                </div>
+            </div>
         </section>
+        <script src="../scripts/monday.js"></script>
     </body>
 </html>
