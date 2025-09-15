@@ -24,7 +24,7 @@ header {
 #detail-container {
     width: 100%;
     display: flex;
-    gap: 96px;
+    justify-content: space-between;
 }
 
 #instruction-container {

@@ -1,54 +1,163 @@
-{
-    "number": "I",
-    "title": "Valid Parentheses",
-    "link": "https://leetcode.com/problems/valid-parentheses/description/",
-    "site": "leetcode.com",
-    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
-    "rules": [
-        "Open brackets must be closed by the same type of brackets.",
-        "Open brackets must be closed in the correct order.",
-        "Every closing bracket has a corresponding opening bracket of the same type."
-    ],
-    "constraints": [
-        "1 <= s.length <= 10⁴",
-        "s consists only of the characters '()[]{}'."
-    ],
-    "examples": [
-        {
-            "input": "s = \"()\"",
-            "output": "true"
-        },
-        {
-            "input": "s = \"()[]{}\"",
-            "output": "true"
-        },
-        {
-            "input": "s = \"(]\"",
-            "output": "false"
-        },
-        {
-            "input": "s = \"([])\"",
-            "output": "true"
-        },
-        {
-            "input": "s = \"([)]\"",
-            "output": "false"
-        },
-        {
-            "input": "s = \"{([)]}\"",
-            "output": "false"
-        },
-        {
-            "input": "s = \"(\"",
-            "output": "false"
-        },
-        {
-            "input": "s = \"{[]}\"",
-            "output": "true"
-        },
-        {
-            "input": "s = \"([{}])\"",
-            "output": "true"
-        }
-    ]
-}
+[
+    {
+        "number": "I",
+        "title": "Valid Parentheses",
+        "link": "https://leetcode.com/problems/valid-parentheses/description/",
+        "site": "leetcode.com",
+        "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+        "rules": [
+            "Open brackets must be closed by the same type of brackets.",
+            "Open brackets must be closed in the correct order.",
+            "Every closing bracket has a corresponding opening bracket of the same type."
+        ],
+        "constraints": [
+            "1 <= s.length <= 10⁴",
+            "s consists only of the characters '()[]{}'."
+        ],
+        "examples": [
+            {
+                "input": "s = \"()\"",
+                "output": "true"
+            },
+            {
+                "input": "s = \"()[]{}\"",
+                "output": "true"
+            },
+            {
+                "input": "s = \"(]\"",
+                "output": "false"
+            },
+            {
+                "input": "s = \"([])\"",
+                "output": "true"
+            },
+            {
+                "input": "s = \"([)]\"",
+                "output": "false"
+            },
+            {
+                "input": "s = \"{([)]}\"",
+                "output": "false"
+            },
+            {
+                "input": "s = \"(\"",
+                "output": "false"
+            },
+            {
+                "input": "s = \"{[]}\"",
+                "output": "true"
+            },
+            {
+                "input": "s = \"([{}])\"",
+                "output": "true"
+            }
+        ]
+    },
+    {
+        "number": "II",
+        "title": "Redundant Braces",
+        "link": "https://www.interviewbit.com/problems/redundant-braces/",
+        "site": "InterviewBit",
+        "description": "Given a string A denoting an expression containing operators '+', '-', '*', '/'. Check whether A has redundant braces or not.",
+        "rules": [
+            "Return 1 if the expression has redundant braces.",
+            "Return 0 if the expression does not have redundant braces."
+        ],
+        "constraints": [
+            "1 <= |A| <= 10^5",
+            "A will always be a valid expression."
+        ],
+        "examples": [
+            {
+                "input": "A = \"((a+b))\"",
+                "output": "1"
+            },
+            {
+                "input": "A = \"(a+(a+b))\"",
+                "output": "0"
+            },
+            {
+                "input": "A = \"((a*b)+(c+d))\"",
+                "output": "0"
+            },
+            {
+                "input": "A = \"(a+b)\"",
+                "output": "0"
+            },
+            {
+                "input": "A = \"((a))\"",
+                "output": "1"
+            },
+            {
+                "input": "A = \"(a+(b*c))\"",
+                "output": "0"
+            },
+            {
+                "input": "A = \"(((a+b)+c))\"",
+                "output": "1"
+            },
+            {
+                "input": "A = \"(a+(b))\"",
+                "output": "1"
+            },
+            {
+                "input": "A = \"((a*b)+((c+d)))\"",
+                "output": "1"
+            }
+        ]
+    },
+    {
+        "number": "III",
+        "title": "Minimum Remove to Make Valid Parentheses",
+        "link": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
+        "site": "leetcode.com",
+        "description": "Given a string s of '(', ')' and lowercase English characters, remove the minimum number of parentheses so that the resulting string is valid.",
+        "rules": [
+            "A valid parentheses string is either empty, contains only lowercase letters, or can be written as AB where A and B are valid strings, or as (A) where A is valid.",
+            "Remove the minimum number of parentheses to make the string valid.",
+            "Return any valid string if multiple solutions exist."
+        ],
+        "constraints": [
+            "1 <= s.length <= 10^5",
+            "s[i] is either '(', ')', or a lowercase English letter."
+        ],
+        "examples": [
+            {
+                "input": "s = \"lee(t(c)o)de)\"",
+                "output": "\"lee(t(c)o)de\""
+            },
+            {
+                "input": "s = \"a)b(c)d\"",
+                "output": "\"ab(c)d\""
+            },
+            {
+                "input": "s = \"))((\"",
+                "output": "\"\""
+            },
+            {
+                "input": "s = \"(a(b(c)d)\"",
+                "output": "\"a(b(c)d)\""
+            },
+            {
+                "input": "s = \"(a))b(c))\"",
+                "output": "\"(a)b(c)\""
+            },
+            {
+                "input": "s = \"(((abc\"",
+                "output": "\"abc\""
+            },
+            {
+                "input": "s = \"a)b(c)d(e)f)\"",
+                "output": "\"ab(c)d(e)f\""
+            },
+            {
+                "input": "s = \"((a)b(c)d\"",
+                "output": "\"(a)b(c)d\""
+            },
+            {
+                "input": "s = \"()(()))\"",
+                "output": "\"()()()\""
+            }
+        ]
+    }
+]

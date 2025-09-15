@@ -1,21 +1,29 @@
 const buttons = document.querySelectorAll("#problem-container button");
-
 const defaultGifIndex = 0;
+let problemsData = [];
 
 fetch("../data.json")
     .then((response) => response.json())
     .then((data) => {
-        const header = document.getElementById("heading-container");
-        const valid = document.querySelector("#valid-container ul");
-        const constraint = document.querySelector("#constraint-container ul");
-        const codeContainer = document.getElementById("code-container");
+        problemsData = data;
+        loadProblem(defaultGifIndex);
+    });
 
-        header.innerHTML = "";
-        valid.innerHTML = "";
-        constraint.innerHTML = "";
-        codeContainer.innerHTML = "";
+function loadProblem(index) {
+    if (!problemsData[index]) return;
 
-        header.innerHTML = `
+    const data = problemsData[index];
+    const header = document.getElementById("heading-container");
+    const valid = document.querySelector("#valid-container ul");
+    const constraint = document.querySelector("#constraint-container ul");
+    const codeContainer = document.getElementById("code-container");
+
+    header.innerHTML = "";
+    valid.innerHTML = "";
+    constraint.innerHTML = "";
+    codeContainer.innerHTML = "";
+
+    header.innerHTML = `
         <a href="${data.link}" target="_blank">
             <h2>
                 ${data.number} <span id="link">${data.title}</span><span style="font-size: 16px; margin-left: 16px">${data.site}</span>
@@ -24,32 +32,32 @@ fetch("../data.json")
         <p>
             ${data.description}
         </p>
-        `;
+    `;
 
-        data.rules.forEach((count) => {
-            const li = document.createElement("li");
-            li.textContent = count;
-            valid.appendChild(li);
-        });
-
-        data.constraints.forEach((count) => {
-            const li = document.createElement("li");
-            li.textContent = count;
-            constraint.appendChild(li);
-        });
-
-        data.examples.forEach((count, index) => {
-            const pre = document.createElement("pre");
-            const code = document.createElement("code");
-            code.textContent = `Input: ${count.input}\nOutput: ${count.output}`;
-            pre.appendChild(code);
-            codeContainer.appendChild(pre);
-
-            if (index != data.examples.length - 1) {
-                codeContainer.appendChild(document.createElement("br"));
-            }
-        });
+    data.rules.forEach((rule) => {
+        const li = document.createElement("li");
+        li.textContent = rule;
+        valid.appendChild(li);
     });
+
+    data.constraints.forEach((constraints) => {
+        const li = document.createElement("li");
+        li.textContent = constraints;
+        constraint.appendChild(li);
+    });
+
+    data.examples.forEach((example, index) => {
+        const pre = document.createElement("pre");
+        const code = document.createElement("code");
+        code.textContent = `Input: ${example.input}\nOutput: ${example.output}`;
+        pre.appendChild(code);
+        codeContainer.appendChild(pre);
+
+        if (index !== data.examples.length - 1) {
+            codeContainer.appendChild(document.createElement("br"));
+        }
+    });
+}
 
 buttons.forEach((button, index) => {
     const images = button.querySelectorAll("img");
@@ -73,5 +81,7 @@ buttons.forEach((button, index) => {
 
         staticImg.style.display = "none";
         gifImg.style.display = "block";
+
+        loadProblem(index);
     });
 });
