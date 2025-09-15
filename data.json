@@ -57,7 +57,7 @@
         "number": "II",
         "title": "Redundant Braces",
         "link": "https://www.interviewbit.com/problems/redundant-braces/",
-        "site": "InterviewBit",
+        "site": "InterviewBit.com",
         "description": "Given a string A denoting an expression containing operators '+', '-', '*', '/'. Check whether A has redundant braces or not.",
         "rules": [
             "Return 1 if the expression has redundant braces.",

@@ -85,3 +85,18 @@
 .title-description {
     margin-bottom: 64px;
 }
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.modal-backdrop.open {
+    display: flex;
+}

@@ -29,7 +29,7 @@
                         class="second"
                     />
                 </a>
-                <a href="" class="day-button">
+                <a class="day-button open-btn">
                     <img
                         src="./assets/homepage/tuesday-1.jpg"
                         alt="tuesday"
@@ -43,7 +43,7 @@
                         class="second"
                     />
                 </a>
-                <a href="" class="day-button">
+                <a class="day-button open-btn">
                     <img
                         src="./assets/homepage/wednesday-1.jpg"
                         alt="wednesday"
@@ -57,7 +57,7 @@
                         class="second"
                     />
                 </a>
-                <a href="" class="day-button">
+                <a class="day-button open-btn">
                     <img
                         src="./assets/homepage/thursday-1.jpg"
                         alt="thursday"
@@ -71,7 +71,7 @@
                         class="second"
                     />
                 </a>
-                <a href="" class="day-button">
+                <a class="day-button open-btn">
                     <img
                         src="./assets/homepage/friday-1.jpg"
                         alt="friday"
@@ -87,5 +87,28 @@
                 </a>
             </div>
         </section>
+
+        <!-- modal -->
+        <div class="modal-backdrop">
+            <img
+                src="./assets/homepage/not-yet.png"
+                alt="not-yet!"
+                class="modal"
+            />
+        </div>
+        <script>
+            const openBtns = document.querySelectorAll(".open-btn");
+            const backdrop = document.querySelector(".modal-backdrop");
+
+            openBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    backdrop.classList.add("open");
+
+                    setTimeout(() => {
+                        backdrop.classList.remove("open");
+                    }, 1000);
+                });
+            });
+        </script>
     </body>
 </html>
